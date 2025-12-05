@@ -9,29 +9,34 @@
 <body>
     <div class="container">
         <div class="Text">
-            <textarea name="" id="fromLang" placeholder="Enter Text"></textarea>
-            <textarea name="" id="toLang" placeholder="Translate"></textarea>
+            <textarea id="fromLang" placeholder="Enter Text"></textarea>
+            <textarea id="toLang" placeholder="Translate"></textarea>
         </div>
+
+        <!-- Updated Tools Section -->
         <div class="selectArea">
+
+            <!-- Left: Input tools -->
             <div class="slt1">
-                <img src="speaker.svg" alt="" class="speak" id="from">
-                <img src="copy.svg" alt="" class="copy" id="from">
-                <select name="" id="fselect">
-                  
-                </select>
+                <img src="speaker.svg" class="speak" id="from">
+                <img src="copy.svg" class="copy" id="from">
+                <img src="mic.svg" class="mic" id="micBtn"> 
+                <select id="fselect"></select>
             </div>
+
+            <!-- Right: Output tools -->
             <div class="slt2">
-                <img src="speaker.svg" alt="" class="speak" id="to">
-                <img src="copy.svg" alt="" class="copy" id="to">
-                <select name="" id="sselect">
-                   <!-- <option value="en-GB">English</option>
-                    <option value="hi-IN">Hindi</option>-->
-                   
-                </select>
+                <img src="speaker.svg" class="speak" id="to">
+                <img src="copy.svg" class="copy" id="to">
+                <select id="sselect"></select>
             </div>
+
         </div>
-        <button id="transfer">Translate</button> 
+
+        <button id="transfer">Translate</button>
     </div>
+
     <script src="countries.js"></script>
     <script src="script.js"></script>
+</body>
 </html>
