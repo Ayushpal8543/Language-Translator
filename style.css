@@ -1,141 +1,3 @@
-/*{
-    margin: 0;
-    padding: 0;
-    font-family: "poppins", sans-serif;
-}
-body{
-    background-color:#d9dbf1;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.container{
-    width: 650px;
-    height: 600px;
-    background: linear-gradient(to top,#546a76,#9993B2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: 2px 2px 10px;
-    border-radius: 10px;
-    border: none;
-
-}
-.Text{
-    width: 100%;
-    height: 260px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    overflow: hidden;
-}
-#fromLang{
-    width: 100%;
-    height: 260px;
-    margin-left: 7px;
-    color: black;
-    background-color: #ffff;
-    font-size: 19px;
-    padding: 20px;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 8px;
-}
-#toLang{
-    width: 100%;
-    height: 260px;
-    margin-right: 7px;
-    color: black;
-    background-color: #ffff;
-    font-size: 19px;
-    padding: 20px;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 8px;
-}
-.selectArea{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #262730;
-    margin-top: 20px;
-}
-.slt1{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    border-right: 5px solid #546a76;
-    border-radius: 5px;
-
-}
-.slt2{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    border-left: 5px solid #546a76;
-    border-radius: 5px;
-
-}
-#fselect{
-    padding: 10px 40px 10px 40px;
-    box-sizing: border-box;
-    font-size: 15px;
-    border:none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-#sselect{
-    padding: 10px 40px 10px 40px;
-    box-sizing: border-box;
-    font-size: 15px;
-    border:none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-#transfer{
-    width: 500px;
-    height: 50px;
-    background-color: #262730;
-    margin-top: 50px;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-}
-.speak, .copy {
-    width: 28px;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-/* ✨ Hover effect *
-.speak:hover, .copy:hover {
-    transform: scale(1.2);
-    filter: brightness(1.4);
-}
-#transfer {
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-#transfer:hover {
-    background-color: #3b3c46;
-    transform: scale(1.05);
-    box-shadow: 0 0 12px rgba(255,255,255,0.4);
-}*/
 *{
     margin: 0;
     padding: 0;
@@ -267,4 +129,63 @@ body{
 .speak:hover, .copy:hover{
     transform: scale(1.2);
     filter: brightness(1.4);
+}
+.mic.listening{
+    filter: brightness(2);
+    transform: scale(1.3);
+}
+.speak, .copy, .mic{
+    width: 28px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.speak:hover, .copy:hover{
+    transform: scale(1.2);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px){
+    body{
+        height: auto;
+        padding: 20px;
+    }
+
+    .container{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .Text{
+        flex-direction: column;
+        height: auto;
+    }
+
+    #fromLang,#toLang{
+        height: 160px;
+    }
+
+    .selectArea{
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .slt1, .slt2{
+        width: 100%;
+        border: none;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    #fselect,#sselect{
+        width: 45%;
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    #transfer{
+        width: 100%;
+        height: 45px;
+    }
 }
